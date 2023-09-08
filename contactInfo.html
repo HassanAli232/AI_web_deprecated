@@ -25,21 +25,43 @@
     <label>Send a Message to us</label>
 
     <!-- The form to send messages -->
-    <form>
+    <form method="get" action="thank.html">
       <div>
-        <label>Name: </label>
-        <input type="text" />
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" placeholder="ex. Ali Hassan" />
       </div>
       <div>
-        <label>Title: </label>
-        <input type="text" />
+        <label for="user">email: </label>
+        <input
+          type="email"
+          name="user"
+          id="user"
+          placeholder="example@gmail.com"
+          required
+        />
+      </div>
+      <div>
+        <label for="title">Title: </label>
+        <input
+          type="text"
+          id="title"
+          name="emailTitle"
+          placeholder="A new Algorithm to explain"
+          required
+        />
       </div>
 
-      <label>Message: </label>
+      <label for="message">Message: </label>
       <div>
-        <textarea cols="30" rows="10"></textarea>
+        <textarea
+          id="message"
+          name="message"
+          required
+          cols="30"
+          rows="10"
+        ></textarea>
       </div>
-
+      <button type="reset">Reset</button>
       <button type="submit">Send</button>
     </form>
 
