@@ -19,10 +19,15 @@
       contributions, the fisrt one will be proved.
     </p>
 
-    <form action="thank.html" method="get" autocomplete="on">
+    <form
+      action="thank.html"
+      method="get"
+      autocomplete="on"
+      enctype="multipart/form-data"
+    >
       <h2>Your personal Information:</h2>
       <div>
-        <label for="firstName">firstName: </label>
+        <label for="firstName">firstName:* </label>
         <input
           type="text"
           name="firstName"
@@ -30,17 +35,17 @@
           placeholder="ex. Ali"
           required
         />
-        <label for="secondName">Second Name: </label>
+        <label for="lastName">Last Name:* </label>
         <input
           type="text"
-          name="secondName"
-          id="secondName"
+          name="lastName"
+          id="lastName"
           placeholder="ex. Alhassan"
           required
         />
       </div>
       <div>
-        <label for="age">Age: </label>
+        <label for="age">Age:* </label>
         <input type="number" name="age" id="age" min="15" max="120" required />
 
         <label for="male">male</label>
@@ -49,7 +54,7 @@
         <input type="radio" name="gender" id="female" value="female" required />
       </div>
       <div>
-        <label for="user">email: </label>
+        <label for="user">email:* </label>
         <input
           type="email"
           name="user"
@@ -60,7 +65,7 @@
       </div>
 
       <div>
-        <label for="">Your Degree:</label>
+        <label for="">Your Degree:* </label>
         <div>
           <label for="high school">High school</label>
           <input
@@ -73,20 +78,32 @@
         </div>
         <div>
           <label for="bachelor">Bachelor</label>
-          <input type="radio" name="degree" id="bachelor" value="bachelor" />
+          <input
+            type="radio"
+            name="degree"
+            id="bachelor"
+            value="bachelor"
+            required
+          />
         </div>
         <div>
           <label for="master">Master</label>
-          <input type="radio" name="degree" id="master" value="master" />
+          <input
+            type="radio"
+            name="degree"
+            id="master"
+            value="master"
+            required
+          />
         </div>
         <div>
           <label for="phd">Phd</label>
-          <input type="radio" name="degree" id="phd" value="phd" />
+          <input type="radio" name="degree" id="phd" value="phd" required />
         </div>
       </div>
 
       <div>
-        <label for="linkedIn">linkedIn: </label>
+        <label for="linkedIn">linkedIn:* </label>
         <input type="url" id="linkedIn" name="linkedIn" required />
       </div>
 
@@ -96,9 +113,59 @@
       </div>
 
       <h2>Contribution Information</h2>
+      <div>
+        <label for="domain">Domain:* </label>
+        <input type="text" list="domains" name="domain" id="domain" required />
 
-      <button type="reset">Reset</button>
-      <button type="submit">Submit</button>
+        <datalist id="domains">
+          <option value="AI">AI</option>
+          <option value="ML">ML</option>
+          <option value="DL">DL</option>
+          <option value="RL">RL</option>
+        </datalist>
+      </div>
+
+      <div>
+        <label for="topic">Topic:* </label>
+        <input type="text" name="topic" id="topic" required />
+      </div>
+
+      <div>
+        <label for="contributedIllustration">
+          Your illustration of the topic:*
+        </label>
+
+        <p>You should explain the topic as you want it to be in our website.</p>
+
+        <textarea
+          name="contributedIllustration"
+          id="contributedIllustration"
+          required
+          minlength="500"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+
+      <div>
+        <label for="file">File</label>
+        <input type="file" name="file" id="file" />
+      </div>
+      <div>
+        <div><label for="details">How you want it to be present?* </label></div>
+        <textarea
+          name="details"
+          id="details"
+          cols="30"
+          rows="10"
+          required
+          minlength="150"
+        ></textarea>
+      </div>
+      <div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </div>
     </form>
 
     <a href="/index.html">Main Page</a>
